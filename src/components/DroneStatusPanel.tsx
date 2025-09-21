@@ -240,7 +240,7 @@ export function DroneStatusPanel() {
                             variant="outline" 
                             size="sm" 
                             className="flex-1 text-xs"
-                            onClick={(e) => {
+                            onClick={(e: { stopPropagation: () => void; }) => {
                               e.stopPropagation();
                               recallDrone(drone.id);
                             }}
@@ -254,7 +254,7 @@ export function DroneStatusPanel() {
                             variant="outline" 
                             size="sm" 
                             className="flex-1 text-xs"
-                            onClick={(e) => {
+                            onClick={(e: { stopPropagation: () => void; }) => {
                               e.stopPropagation();
                               deployDrone(drone.id);
                             }}
